@@ -2,7 +2,7 @@ function StatsList(props) {
   const { stats } = props;
 
   return (
-    <ul className="stats-list">
+    <ul aria-label="list" className="stats-list">
       {stats.map((statItem, index) => {
         const { stat, base_stat } = statItem;
         return (

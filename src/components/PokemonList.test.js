@@ -86,6 +86,9 @@ const pokemonOne = {
 describe("should have a heading of pokemon", () => {
   it("", () => {
     render(<PokemonList />);
+    const h1El = screen.getByRole("heading", { name: "Select Your Pokemon" });
+
+    expect(h1El).toBeInTheDocument();
   });
 });
 

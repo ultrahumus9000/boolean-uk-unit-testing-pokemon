@@ -86,6 +86,22 @@ const pokemon = {
 describe("should have a heading of pokemon", () => {
   it("", () => {
     render(<PokemonCard pokemon={pokemon} />);
+    logRoles(document.body);
+    const h2El = screen.getByRole("heading", { name: "Bulbasaur" });
+
+    expect(h2El).toBeInTheDocument();
+  });
+  it("", () => {
+    render(<PokemonCard pokemon={pokemon} />);
+    logRoles(document.body);
+    const imgEl = screen.getByRole("img");
+    expect(imgEl).toBeInTheDocument();
+  });
+  it("", () => {
+    render(<PokemonCard pokemon={pokemon} />);
+    logRoles(document.body);
+    const buttonEl = screen.getByRole("button");
+    expect(buttonEl).toBeInTheDocument();
   });
 });
 

@@ -87,6 +87,31 @@ describe("should have a heading of pokemon", () => {
   it("", () => {
     render(<StatsList stats={pokemonOne.stats} />);
   });
+  it("", () => {
+    render(<StatsList stats={pokemonOne.stats} />);
+    const ul = screen.getByRole("list", { name: "list" });
+    expect(ul).toBeInTheDocument();
+  });
+  it("", () => {
+    render(<StatsList stats={pokemonOne.stats} />);
+    const ul = screen.getByRole("list", { name: "list" });
+    const items = within(ul).getAllByRole("listitem");
+    expect(items.length).toBe(6);
+  });
+  it("", () => {
+    render(<StatsList stats={pokemonOne.stats} />);
+    const ul = screen.getByRole("list", { name: "list" });
+    const items = within(ul).getAllByRole("listitem");
+    const itemsText = items.map((el) => el.textContent);
+    expect(itemsText).toEqual([
+      "hp45",
+      "attack49",
+      "defense49",
+      "special-attack65",
+      "special-defense65",
+      "speed45",
+    ]);
+  });
 });
 // Test the stats list:
 //  - heading (can we give it a heading without changing the UI)
