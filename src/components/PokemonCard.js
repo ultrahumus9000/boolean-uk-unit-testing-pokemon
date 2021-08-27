@@ -3,7 +3,7 @@ import StatsList from "./StatsList";
 
 function PokemonCard(props) {
   const { name, sprites, stats } = props.pokemon;
-  console.log(props.pokemon);
+  console.log(stats);
   const imageSrc = sprites.other["official-artwork"]["front_default"];
 
   return (

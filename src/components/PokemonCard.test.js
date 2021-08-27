@@ -3,7 +3,7 @@ import { logRoles, render, screen, within } from "@testing-library/react";
 // import React from "react";
 import PokemonCard from "./PokemonCard";
 
-const pokemonOne = {
+const pokemon = {
   name: "bulbasaur",
   sprites: {
     back_default:
@@ -84,7 +84,9 @@ const pokemonOne = {
 };
 
 describe("should have a heading of pokemon", () => {
-  render(<PokemonCard />);
+  it("", () => {
+    render(<PokemonCard pokemon={pokemon} />);
+  });
 });
 
 // Test a single pokemon card:

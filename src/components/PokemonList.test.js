@@ -84,7 +84,9 @@ const pokemonOne = {
 };
 
 describe("should have a heading of pokemon", () => {
-  render(<PokemonList />);
+  it("", () => {
+    render(<PokemonList />);
+  });
 });
 
 // Test the pokemon list:
